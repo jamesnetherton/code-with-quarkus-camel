@@ -25,7 +25,7 @@ public class MyReactiveMessagingApplication {
         camelContext.start();
     }
 
-    @Incoming("manifest-request-upc")
+    @Incoming("source-in")
     public CompletionStage<Void> consume(Message<String> message) {
         System.out.println(message);
         return message.ack();
